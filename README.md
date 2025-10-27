@@ -60,3 +60,18 @@ The codebase is tested with [JUnit](https://junit.org/) and uses [Gradle](https:
     ```
 
 That's a wrap for now.
+
+## Scope & Requirements
+See **docs/requirements.md** for the product definition, scope, and acceptance criteria.
+
+### Quick links
+- Health: `GET /health` (liveness), `GET /health/ready` (readiness)
+- Example API: `GET /api/example/{id}` (stub)
+- Docs: `docs/requirements.md`
+
+## Assignment – Tests & CI
+- Unit test: `ScoringTest` (GamePulse trending score), under `applications/basic-server/src/test/...`
+- Integration test: `RoutesIntegrationTest` (GET `/` returns 200).
+- CI: GitHub Actions workflow runs `./gradlew clean build` on each push/PR.
+
+    [CI](https://github.com/Jamespoju/kotlin-ktor-starter/actions/workflows/build.yml/badge.svg)
