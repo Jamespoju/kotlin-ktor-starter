@@ -13,7 +13,7 @@ import kotlinx.serialization.json.Json
 /**
  * Standalone collector for assignment:
  * - Fetches games from FreeToGame API (no auth)
- * - Upserts into MongoDB
+ * - Upsert into MongoDB
  *
  * Run:
  *   ./gradlew :applications:basic-server:runCollectorGames

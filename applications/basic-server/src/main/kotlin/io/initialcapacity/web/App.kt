@@ -62,9 +62,31 @@ fun Application.module() {
             }
         }
 
+        get("/leaderboard") {
+            call.respond(
+                mapOf(
+                    "games" to listOf(
+                        mapOf(
+                            "id" to "game-1",
+                            "name" to "Example Game",
+                            "trendingScore" to 0.85
+                        )
+                    )
+                )
+            )
+        }
+
         get("/games") {
             val games = io.initialcapacity.web.repo.GameRepo.list()
             call.respond(games)
+        }
+
+        get("/health") {
+            call.respond(HttpStatusCode.OK, mapOf("status" to "healthy"))
+        }
+        get("/metrics") {
+            val rps = String.format("%.4f", RequestRateMeter.rps())
+            call.respond(HttpStatusCode.OK, mapOf("requests_per_second" to rps))
         }
     }
 }
