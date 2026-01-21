@@ -1,3 +1,14 @@
+## Academic Context
+
+This project is based on the course-provided example repository
+"kotlin-ktor-starter" from the Initial Capacity GitHub organization.
+The original codebase was used as a starting point and adapted to
+model the GamePulse system described in this report.
+
+The focus of this project is system architecture, design decisions,
+and requirement testability rather than building a production-ready
+application from scratch.
+
 # Kotlin ktor starter
 
 An [application continuum](https://www.appcontinuum.io/) style example using Kotlin and Ktor
